@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="height: 2000px;">
+		
+		<button style="position: fixed; bottom: 50px; right: 50px;" onclick="func()">回到顶部</button>
+		
+		<script type="text/javascript">
+			
+			// onscroll : 当页面出现滚动时执行
+			window.onscroll = function(){
+				console.log("翻滚吧");
+				
+				// 获取滚动条顶端的y轴高度
+				// 适配   IE 及 非IE浏览器
+				var height = document.documentElement.scrollTop || document.body.scrollTop;
+				console.log(height);
+			}
+			
+			// 回到顶端
+			function func(){
+				document.documentElement.scrollTop = 0;
+				document.body.scrollTop = 0;
+			}
+			
+		</script>
+		
+	</body>
+</html>
